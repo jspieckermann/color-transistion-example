@@ -3,12 +3,14 @@
     padding: 0px;
     min-width: 100%;
     min-height: 100%;
-    background-color: aqua;
-    color: black;
     -webkit-transition: background-color 0.35s ease-out, color 0.25s ease-out;
     -moz-transition: background-color 0.35s ease-out, color 0.25s ease-out;
     -o-transition: background-color 0.35s ease-out, color 0.25s ease-out;
     transition: background-color 0.35s ease-out, color 0.25s ease-out;
+}
+
+#flex {
+    flex-grow: 1;
 }
 
 #one, #two, #three, #four, #five {
@@ -16,4 +18,7 @@
     max-width: 75%;
     // if you want that each section takes 100% of the visible screen heigth.
     //min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
 }

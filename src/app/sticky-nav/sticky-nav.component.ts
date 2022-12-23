@@ -8,12 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class StickyNavComponent implements OnInit {
 
   @Input() currentIndex: number = 1;
+  @Input() count: number = 1;
   @Output() selectionEmitter = new EventEmitter<number>();
+
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   select(index: number): void {
     this.selectionEmitter.emit(index);

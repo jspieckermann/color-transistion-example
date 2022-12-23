@@ -1,5 +1,8 @@
 #sticky {
     position : sticky;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     left: 95%;
     top :50%;
     float: left;
@@ -14,20 +17,23 @@
     -o-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    align-self: center;
     margin: 0;
-    max-width: 8px;
-    min-width: 8px;
-    max-height: 20px;
-    min-height: 20px;
-    border-color: darkgray;
+    max-width: 9px;
+    min-width: 9px;
+    max-height: 25px;
+    min-height: 25px;
     border-radius: 1px;
-    border-width: 1px;
-    background-color:  lightgrey;
     border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    background-color:  #ffffffbb;
   }
 
   input[type="radio"]:checked {
     background-color:  white;
+    max-width: 11px;
+    min-width: 11px;
   }
 
 

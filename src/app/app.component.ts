@@ -15,6 +15,8 @@ export class AppComponent implements AfterViewInit{
 
   sectionIndex: number = 0;
   divs: ElementRef<HTMLInputElement>[] = [];
+  bgColors = ['#183f67', '#39830c', '#fff', '#944c97', '#980f38'];
+  fgColors = ['white', 'white', 'black', 'white', 'white'];
 
   constructor(private window: Window) { }
 
@@ -23,6 +25,7 @@ export class AppComponent implements AfterViewInit{
    */
   ngAfterViewInit() {
     this.divs = [this.one, this.two, this.three, this.four, this.five];
+    this.onResizeOrScroll();
   }
 
   onResizeOrScroll() {
@@ -38,8 +41,7 @@ export class AppComponent implements AfterViewInit{
    * @param screenH Height of the inner screen (visible screen area)
    */
   updateBackgrund(screenY: number, screenH: number) {
-    let bgColors = ['aqua', 'gray', 'chartreuse', 'blue', 'coral'];
-    let fgColors = ['black', 'white', 'black', 'white', 'black'];
+
     let currentMax: number = 0;
     let currentIndex: number = 0;
 
@@ -51,8 +53,8 @@ export class AppComponent implements AfterViewInit{
           currentIndex = i;
         }
     }
-    this.parent.nativeElement.style.backgroundColor = bgColors[currentIndex];
-    this.parent.nativeElement.style.color = fgColors[currentIndex];
+    this.parent.nativeElement.style.backgroundColor = this.bgColors[currentIndex];
+    this.parent.nativeElement.style.color = this.fgColors[currentIndex];
     this.sectionIndex = currentIndex;
   }
 
