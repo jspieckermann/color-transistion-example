@@ -3,13 +3,19 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    left: 95%;
+    right: 2%;
     top :50%;
-    float: left;
+    float: right;
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -o-transform: translate(0, -50%);
     transform: translate(0, -50%);
+ }
+
+ #sticky div {
+  display: flex;
+  column-gap: 10px;
+  align-content: center;
  }
 
  input[type="radio"] {
@@ -34,6 +40,15 @@
     background-color:  white;
     max-width: 11px;
     min-width: 11px;
+    -webkit-transform: translate(-2px, 0);
+    -moz-transform: translate(-2px, 0);
+    -o-transform: translate(-2px, 0);
+    transform: translate(-2px, 0);
+  }
+
+  #label {
+    align-self: center;
+    font-weight: bold;
   }
 
 

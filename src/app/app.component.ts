@@ -17,6 +17,7 @@ export class AppComponent implements AfterViewInit{
   divs: ElementRef<HTMLInputElement>[] = [];
   bgColors = ['#183f67', '#39830c', '#fff', '#944c97', '#980f38'];
   fgColors = ['white', 'white', 'black', 'white', 'white'];
+  sectionTitle = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5'];
 
   constructor(private window: Window) { }
 
